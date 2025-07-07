@@ -1,0 +1,11 @@
+<%- include("../partials/_navbar.ejs") %>
+<h1>All Movies</h1>
+<ul>
+  <% movies.forEach(movie => { %>
+    <li>
+      <%= movie.movie %> (<%= movie.type %>) by <%= movie.owner.username %>
+      <a href="/movies/<%= movie._id %>">View details</a>
+    </li>
+  <% }) %>
+</ul>
+<a href="/movies/new">Add a new Movie</a>

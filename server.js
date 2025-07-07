@@ -31,14 +31,11 @@ app.use(session({
   saveUninitialized: true
 }));
 
-console.log("passUserToView is:", passUserToView);
 app.use(passUserToView);
 
 app.set("view engine", "ejs");
 
 app.use("/auth", authController);
-console.log("isSignedIn is:", isSignedIn);
-console.log("movieController is:", movieController);
 app.use("/movies", isSignedIn, movieController);
 
 app.get("/", (req, res) => {

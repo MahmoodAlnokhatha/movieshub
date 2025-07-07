@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js -e css,ejs,js,json"
   },
@@ -51,5 +50,13 @@
     "touch": "^3.1.1",
     "undefsafe": "^2.0.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahmoodAlnokhatha/movieshub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MahmoodAlnokhatha/movieshub/issues"
+  },
+  "homepage": "https://github.com/MahmoodAlnokhatha/movieshub#readme",
   "description": ""
 }
