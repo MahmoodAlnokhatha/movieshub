@@ -1,7 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
@@ -9,9 +9,6 @@ body {
   background-color: #f4f4f9;
   color: #333;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 nav {
@@ -41,7 +38,7 @@ nav a:hover {
 h1 {
   text-align: center;
   margin: 2rem 0;
-  color: #162447;
+  color: #e0e3eb;
 }
 
 ul {
@@ -69,8 +66,6 @@ form {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
 }
 
 label {
@@ -87,7 +82,6 @@ input, select {
   border-radius: 5px;
 }
 
-
 button {
   background-color: #e94560;
   color: #fff;
@@ -96,7 +90,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  margin: 0 0.5rem;
 }
 
 button:hover {
@@ -112,6 +105,21 @@ a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  } 
+  
+  nav a {
+    margin: 0.5rem 0;
+  } 
+  
+  li {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 .details-box {
   max-width: 600px;
@@ -135,7 +143,6 @@ a:hover {
   margin: 0.5rem 0;
   color: #333;
 }
-
 .details-box a {
   color: #e94560;
   text-decoration: none;
@@ -144,76 +151,4 @@ a:hover {
 
 .details-box a:hover {
   text-decoration: underline;
-}
-
-.like-dislike-box {
-  max-width: 600px;
-  margin: 1rem auto 2rem auto; 
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e94560;
-  text-align: center;
-  flex-direction: row;
-}
-
-.like-dislike-box h2 {
-  color: #162447;
-  margin-bottom: 0.5rem;
-}
-
-.like-dislike-box p {
-  font-size: 1.1em;
-  margin: 0.25rem 0;
-  color: #333;
-}
-
-.like-dislike-box form {
-  display: inline-flex; 
-  margin: 0.5rem 0;
-}
-
-.like-dislike-box button {
-  margin: 0 0.25rem;
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-  }
-
-  li {
-    text-align: center;
-  }
-
-  .details-box {
-    margin: 1rem;
-    padding: 1rem;
-    width: 90%;
-  }
-
-  .like-dislike-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1rem;
-    padding: 0.5rem;
-    width: 90%;
-  }
-
-  .like-dislike-box form {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .like-dislike-box button {
-    margin: 0.25rem 0;
-    width: 100%;
-  }
 }
