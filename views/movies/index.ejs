@@ -1,11 +1,22 @@
-<%- include("../partials/_navbar.ejs") %>
-<h1>All Movies</h1>
-<ul>
-  <% movies.forEach(movie => { %>
-    <li>
-      <%= movie.movie %> (<%= movie.type %>) by <%= movie.owner.username %>
-      <a href="/movies/<%= movie._id %>">View details</a>
-    </li>
-  <% }) %>
-</ul>
-<a href="/movies/new">Add a new Movie</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Movies - Movies Hub</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <%- include("../partials/_navbar.ejs") %>
+  <h1>All Movies</h1>
+  <ul>
+    <% movies.forEach(movie => { %>
+      <li>
+        <%= movie.movie %> (<%= movie.type %>) by <%= movie.owner.username %>
+        <a href="/movies/<%= movie._id %>">View details</a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/movies/new">Add a new Movie to the list</a>
+</body>
+</html>

@@ -1,27 +1,38 @@
-<%- include('../partials/_navbar.ejs') %>
-<h1>Edit <%= movie.movie %></h1>
-<form action="/movies/<%= movie._id %>?_method=PUT" method="POST">
-  <label for="movie">Movie Title:</label>
-  <input type="text" name="movie" id="movie" value="<%= movie.movie %>">
-  <br>
-  <label for="type">Type:</label>
-  <select name="type" id="type">
-    <option value="Comedy" <%= movie.type === 'Comedy' ? 'selected' : '' %>>Comedy</option>
-    <option value="History" <%= movie.type === 'History' ? 'selected' : '' %>>History</option>
-    <option value="Action" <%= movie.type === 'Action' ? 'selected' : '' %>>Action</option>
-    <option value="Romance" <%= movie.type === 'Romance' ? 'selected' : '' %>>Romance</option>
-  </select>
-  <br>
-  <label for="platformLink">Platform Link:</label>
-  <input type="text" name="platformLink" id="platformLink" value="<%= movie.platformLink || '' %>">
-  <br>
-  <label for="status">Status:</label>
-  <select name="status" id="status">
-    <option value="to be watched" <%= movie.status === 'to be watched' ? 'selected' : '' %>>To Be Watched</option>
-    <option value="watched" <%= movie.status === 'watched' ? 'selected' : '' %>>Watched</option>
-    <option value="good during night shifts" <%= movie.status === 'good during night shifts' ? 'selected' : '' %>>Good During Night Shifts</option>
-    <option value="dont watch it" <%= movie.status === 'dont watch it' ? 'selected' : '' %>>Don't Watch It</option>
-  </select>
-  <br>
-  <button type="submit">Update Movie</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit <%= movie.movie %> - Movies Hub</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Edit <%= movie.movie %></h1>
+  <form action="/movies/<%= movie._id %>?_method=PUT" method="POST">
+    <label for="movie">Movie Title:</label>
+    <input type="text" name="movie" id="movie" value="<%= movie.movie %>">
+    <br>
+    <label for="type">Type:</label>
+    <select name="type" id="type">
+      <option value="Comedy" <%= movie.type === 'Comedy' ? 'selected' : '' %>>Comedy</option>
+      <option value="History" <%= movie.type === 'History' ? 'selected' : '' %>>History</option>
+      <option value="Action" <%= movie.type === 'Action' ? 'selected' : '' %>>Action</option>
+      <option value="Romance" <%= movie.type === 'Romance' ? 'selected' : '' %>>Romance</option>
+    </select>
+    <br>
+    <label for="platformLink">Platform Link:</label>
+    <input type="text" name="platformLink" id="platformLink" value="<%= movie.platformLink || '' %>">
+    <br>
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+      <option value="to be watched" <%= movie.status === 'to be watched' ? 'selected' : '' %>>To Be Watched</option>
+      <option value="watched" <%= movie.status === 'watched' ? 'selected' : '' %>>Watched</option>
+      <option value="good during night shifts" <%= movie.status === 'good during night shifts' ? 'selected' : '' %>>Good During Night Shifts</option>
+      <option value="dont watch it" <%= movie.status === 'dont watch it' ? 'selected' : '' %>>Don't Watch It</option>
+    </select>
+    <br>
+    <button type="submit">Update Movie</button>
+  </form>
+</body>
+</html>

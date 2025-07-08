@@ -9,11 +9,11 @@ router.get("/sign-up", (req, res) => {
 router.post("/sign-up", async (req, res) => {
   const userInDatabase = await User.findOne({ username: req.body.username });
   if (userInDatabase) {
-    return res.send("Username already taken");
+    return res.send("usernameis taken");
   }
 
   if (req.body.password !== req.body.confirmPassword) {
-    return res.send("Password and confirm password must match");
+    return res.send("password must match");
   }
 
   const hashedPassword = bcrypt.hashSync(req.body.password, 10);
@@ -30,12 +30,12 @@ router.get("/sign-in", (req, res) => {
 router.post("/sign-in", async (req, res) => {
   const userInDatabase = await User.findOne({ username: new RegExp(`^${req.body.username}$`, 'i') });
   if (!userInDatabase) {
-    return res.send("Login Failed. Please try again later");
+    return res.send("Login Failed. Check your information and try again");
   }
 
   const validPassword = bcrypt.compareSync(req.body.password, userInDatabase.password);
   if (!validPassword) {
-    return res.send("Login Failed. Please try again later");
+    return res.send("Login Failed. Check your information and try again");
   }
 
   req.session.user = {

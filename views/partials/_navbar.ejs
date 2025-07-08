@@ -1,10 +1,11 @@
 <nav>
   <% if (user) { %>
-    <h1>Welcome to Movies Hub, <%= user.username %>!</h1>
+    <link rel="stylesheet" href="/public/styles.css">
+    <h1>Welcome to the MoviesHub, <%= user.username %>!</h1>
     <a href="/movies">View all Movies</a>
     <a href="/auth/sign-out">Sign out</a>
   <% } else { %>
-    <h1>Welcome to Movies Hub, guest!</h1>
+    <h1>Welcome to the MoviesHub, guest!</h1>
     <a href="/auth/sign-up">Sign up</a>
     <a href="/auth/sign-in">Sign in</a>
   <% } %>
