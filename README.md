@@ -1,5 +1,5 @@
-### MoviesHub
-###### MoviesHub is a movie tracking web app built with the MEN stack. It allows users to sign up, log in, and track the movies they have watched, plan to watch, or recommend.
+# MoviesHub
+## MoviesHub is a movie tracking web app built with the MEN stack. It allows users to sign up, log in, and track the movies they have watched, plan to watch, or recommend.
 
 ### Features
 ###### 
