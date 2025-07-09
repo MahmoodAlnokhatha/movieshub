@@ -34,4 +34,5 @@
 https://movies-hub-f521f03fda28.herokuapp.com/
 
 ### Screenshots
-!!!
+![image](https://github.com/user-attachments/assets/23f0ffdc-7726-4830-b553-62ef59f3bd07)
+
