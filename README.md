@@ -19,6 +19,9 @@
 - morgan
 - bcrypt
 
+### ERD 
+![ERD with colored entities (UML notation)](https://github.com/user-attachments/assets/6e7c454a-a1ca-4663-877e-05dceae81b1c)
+
 ### User Stories
 - AAU, I can register and log in securely.
 - As a logged-in user, I can add new movies and set the status to:
